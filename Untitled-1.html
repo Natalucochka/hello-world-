@@ -1,6 +1,8 @@
 <!doctype html>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="style.css" media="all" />
+        <script src="validator.js" type="text/javascript"></script>  
         <meta charset="utf-8">
         <meta name="descriptoion" content="Портфоліо та дизайнерсьrі проекти сайтів для найкращих замовників">
         <title>Сайт дизайера</title>
@@ -45,15 +47,17 @@
             <div id="map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2656.2043079685!2d25.93892392888182!3d48.260442669075005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1518693280086" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
-        <form id="contact" action="/action_page.php">         
-            <fieldset>
+        <form class="form" id="contact" action="/action_page.php" onsubmit="return matchpass()">         
+            <fieldset class="buttonHolder">
                 <legend>Залиште інформацію про себе і ми з Вами зв"яжемось:</legend>
                 <label for="firstname" >Ім'я</label>
-                <input type="text" name="firstname" pattern="[A-ZА-ЯЇЄЁІ]{1}[a-zа-яёїєі]{1,15}" title="Юлія" autofocus required/>
+                <input type="text" name="firstname" pattern="[A-ZА-ЯЇЄЁІ]{1}[a-zа-яёїєі]{1,15}" placeholder="Зразок: Юлія"  autofocus required/>
                 <label for="lastname">Прізвище</label>
-                <input type="text" name="lastname" pattern="[A-ZА-ЯЁЇЄІ]{1}[a-zа-яёїєі]{1.15}" title="Прокопенко" required/>
+                <input type="text" name="lastname" pattern="[A-ZА-ЯЁЇЄІ]{1}[a-zа-яёїєі]{1.15}" placeholder="Зразок: Прокопенко" required/>
+                <label for="email">Email</label>
+                <input name="email" type="email" required>
             </fieldset>
-            <fieldset>
+            <fieldset class="buttonHolder">
                 <p>Стать<br>
                 <input type="radio" name="gender" value="male" checked> Чоловіча<br>
                 <input type="radio" name="gender" value="female"> Жіноча<br>
@@ -61,12 +65,11 @@
                 <label for="dateofbirth" >Дата народження</label>
                 <input type="date" name="dateofbirth" title="01.10.1917" autofocus required/>
             </fieldset>
-            <fieldset>
-                <label for="email">Email</label>
-                <input name="email" type="email" required>
-            </fieldset>
-            <fieldset>
-                <input type="submit" value="Відправити">
+            <fieldset class="buttonHolder">
+                    <label for="message">Текст повідомлення:</label>                    
+                    <textarea name="message" cols="40" rows="6"></textarea>
+                    
+            <input class="submit" type="submit" value="Відправити">
             </fieldset>
             </form>
         </body>
