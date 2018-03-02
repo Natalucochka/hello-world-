@@ -1,12 +1,16 @@
 
 
- //function cachDifference () {
- // min = document.getElementById("takevalue1").value;
- // max = document.getElementById("takevalue2").value;
- //  if min > max than 
- // alert ("Прослідкуйте, що б нижня границя була менше верхньої")
- // else 
-//}
+function cachDifference() {
+  min = document.getElementById("takevalue1").value;
+  max = document.getElementById("takevalue2").value;
+ if (min > max) {
+ alert ("Прослідкуйте, щоб нижня границя була менше верхньої")
+}
+else {
+  alert ("Все супер! Продовжуйте!")
+}
+}
+
 
 function  getRandom(min, max){
     
@@ -63,42 +67,32 @@ function  getRandom(min, max){
         }
          if (answer == document.getElementById("takevalue3").value) {
          alert("Все вірно!");
-         countClicks1();
-         
-         //var clickcount
-         
-         //localStorage.setItem ("clickcount" , 0);
-         
-         
+         countYes();
+                          
     } else {
             alert("Не правильно! первірте ще раз");
-            countClicks2();
+            countNo();
         }
-
-        
-      
+              
  }
     
- function countClicks1() {
-   alert("jj");
-  localStorage.clickcount = (localStorage.clickcount) ? Number(localStorage.clickcount) + 1: 1;
-  update(); 
-  console.log(localStorage.clickcount);   
+ function countYes() {
+   
+  localStorage.yes = (localStorage.yes) ? Number(localStorage.yes) + 1: 1;
+  updateByIdFromLocalStorage("target", "yes"); 
+  console.log(localStorage.yes);   
  }
 
- function update() {  
-   
-  document.getElementById("target").innerHTML = localStorage.clickcount || 0 ;
-     }
-
-     function countClicks2() {
-      alert("jр");
-     localStorage.clickcount2 = (localStorage.clickcount2) ? Number(localStorage.clickcount2) + 1: 1;
-     update(); 
-     console.log(localStorage.clickcount2);   
+ 
+     function countNo() {
+     localStorage.no = (localStorage.no) ? Number(localStorage.no) + 1: 1;
+     updateByIdFromLocalStorage("target2", "no"); 
+     console.log(localStorage.no);   
     }
    
-    function update() {  
+ 
+   
+    function updateByIdFromLocalStorage(id, property) {  
       
-     document.getElementById("target2").innerHTML = localStorage.clickcount2 || 0 ;
-        }
+      document.getElementById(id).innerHTML = localStorage[property] || 0 ;
+    }
