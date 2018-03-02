@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styleCopy.css" media="all" />
+        <script src="js22.js" type="text/javascript"></script>  
+        <meta charset="utf-8">
+        <meta name="descriptoion" content="Портфоліо та дизайнерсьrі проекти сайтів для найкращих замовників">
+        <title>Рівняння для малечі</title>
+    </head>
+    <body>
+           
+        <form>
+            <fieldset class="buttonHolder">
+                <legend>Перевіремо уважність</legend>
+                <label for="firstvalue">Нижня межа.</label>
+                <input type="number" name="firstvalue" id="takevalue1" />
+                <br>
+                <label for="secondvalue">Верхня межа</label>
+                <input type="number" name="secondvalue" id="takevalue2" />
+                
+                         
+                
+                  <br>
+                
+                  <input class="submit" type="submit" value="Генерувати перше число" onclick="event.preventDefault(); generateFirstNumber()" > 
+                  <input class="submit" type="submit" value="Генерувати друге число" onclick="event.preventDefault(); generateSecondNumber()" >
+                  <br>
+                  
+
+                  <label for="firstvalue">Тут буде перша цифра</label>
+                  <input type="text" name="firstvalue" id="getvalue1" />
+                  <br>
+                  <label for="secondvalue">Тут буде друга цифра.</label>
+                  <input type="number" name="secondvalue" id="getvalue2" />
+                  <br>
+                  <label for="sign">Обираємо знак </label>              
+                  <select name="sign" id="sign">
+                    <option value="+">+</option>
+                      <option value="-">-</option>
+                      <option value="/">/</option>
+                      <option value="*">*</option>
+                  </select>
+                      
+                    <br>
+                  
+
+                <label for="thirdvalue">Вкажіть правильну відповідь</label>
+                <input type="number" name="thirdvalue" id="takevalue3" />
+                <input class="submit" type="submit" id="check" value="перевіримо)" onclick="event.preventDefault(); checkIt()" >
+                <br>
+                <table>
+                    <tr>
+                      <td>Правильних відповідей</td>
+                      <td id="target">0</td>
+                    </tr>
+                    <tr>
+                        <td>Неправильних відповідей</td>
+                        <td id="target2">0</td>
+                      </tr>
+                  </table>
+                <p id="target">  </p> 
+            </fieldset>  
+                             
+        </form>
+        
+    </body>
+</html>
