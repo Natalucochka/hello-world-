@@ -27,10 +27,10 @@
                   <br>
                   
 
-                  <label for="firstvalue">Тут буде перша цифра</label>
+                  <label for="firstvalue">Перше число</label>
                   <input type="text" name="firstvalue" id="getvalue1" />
                   <br>
-                  <label for="secondvalue">Тут буде друга цифра.</label>
+                  <label for="secondvalue">Друге число.</label>
                   <input type="number" name="secondvalue" id="getvalue2" />
                   <br>
                   <label for="sign">Обираємо знак </label>              
@@ -44,21 +44,23 @@
                     <br>
                   
 
-                <label for="thirdvalue">Вкажіть правильну відповідь</label>
+                <label for="thirdvalue">Яка правильна відповідь?</label>
                 <input type="number" name="thirdvalue" id="takevalue3" />
                 <input class="submit" type="submit" id="check" value="Звірка відповіді" onclick="event.preventDefault(); checkIt()" >
                 <br>
+                <div>
                 <table>
+                        <legend id="tablanswers">Кількість відповідей</legend>
                     <tr>
-                      <td>Правильних відповідей:</td>
+                      <td>Правильних :</td>
                       <td id="target">0</td>
                     </tr>
                     <tr>
-                        <td>Неправильних відповідей:</td>
+                        <td>Неправильних :</td>
                         <td id="target2">0</td>
                       </tr>
                   </table>
-                
+                </div>
             </fieldset>  
                              
         </form>
