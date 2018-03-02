@@ -67,32 +67,50 @@ function  getRandom(min, max){
         }
          if (answer == document.getElementById("takevalue3").value) {
          alert("Все вірно!");
-         countYes();
+         
+           count("target", "yes")
                           
     } else {
             alert("Не правильно! первірте ще раз");
-            countNo();
+        
+            count("target2", "no")
         }
               
  }
     
- function countYes() {
-   
-  localStorage.yes = (localStorage.yes) ? Number(localStorage.yes) + 1: 1;
-  updateByIdFromLocalStorage("target", "yes"); 
-  console.log(localStorage.yes);   
+ function count(id, property){
+  localStorage[property] = (localStorage[property]) ? Number(localStorage[property]) + 1: 1;
+  updateByIdFromLocalStorage(id, property); 
+
+  console.log(localStorage.property);  
+  
  }
 
- 
-     function countNo() {
-     localStorage.no = (localStorage.no) ? Number(localStorage.no) + 1: 1;
-     updateByIdFromLocalStorage("target2", "no"); 
-     console.log(localStorage.no);   
-    }
-   
+
  
    
     function updateByIdFromLocalStorage(id, property) {  
       
       document.getElementById(id).innerHTML = localStorage[property] || 0 ;
     }
+
+
+
+
+
+
+
+    // function countYes() {
+   
+ // localStorage.yes = (localStorage.yes) ? Number(localStorage.yes) + 1: 1;
+ // updateByIdFromLocalStorage("target", "yes"); 
+ // console.log(localStorage.yes);   
+// }
+
+ 
+   //  function countNo() {
+   //  localStorage.no = (localStorage.no) ? Number(localStorage.no) + 1: 1;
+   //  updateByIdFromLocalStorage("target2", "no"); 
+   //  console.log(localStorage.no);   
+  //  }
+   
