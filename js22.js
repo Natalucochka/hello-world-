@@ -95,6 +95,11 @@ function  getRandom(min, max){
     }
 
 
+    function clearStorage() {
+      
+    
+      localStorage.clear();
+    }
 
 
 
