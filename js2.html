@@ -48,8 +48,10 @@
                 <input type="number" name="thirdvalue" id="takevalue3" />
                 <input class="submit" type="submit" id="check" value="Звірка відповіді" onclick="event.preventDefault(); checkIt()" >
                 <br>
-                <div>
-                <table>
+                <details>
+                        <summary> Підсумки </summary>
+                    <div>
+                    <table>
                         <legend id="tablanswers">Кількість відповідей</legend>
                     <tr>
                       <td>Правильних :</td>
@@ -62,6 +64,7 @@
                   </table>
                   <input class="submit" type="submit" value="Очистити результати" onclick="event.preventDefault(); clearStorage()" > 
                 </div>
+                </details>
             </fieldset>  
                              
         </form>
